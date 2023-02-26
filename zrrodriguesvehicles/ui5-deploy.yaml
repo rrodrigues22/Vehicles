@@ -16,6 +16,9 @@ builder:
         target:
           url: http://vm29.4hub.cloud:52900
           client: "100"
+        credentials:
+        username: env:XYZ_USER
+        password: env:XYZ_PASSWORD
         app:
           name: ZRRVEHICLES
           description: App de teste RRODRIGUES Vehicles
