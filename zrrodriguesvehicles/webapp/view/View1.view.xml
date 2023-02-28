@@ -7,14 +7,17 @@
     displayBlock="true">
     <Page id="page" title="{i18n>title}">
         <content>
-           
-                <smartFilterBar:SmartFilterBar id="smartFilterBar" liveMode="true" entitySet="ZRDWCDS_VEHICLES" persistencyKey="ContractsSmartFilterBar">
-                    <smartFilterBar:controlConfiguration>
-                        <smartFilterBar:ControlConfiguration key="BrandDescription" label="Marca" visibleInAdvancedArea="true" />
-                        <smartFilterBar:ControlConfiguration key="ModelDescription" label="Modelo" visibleInAdvancedArea="true" />
-                        <smartFilterBar:ControlConfiguration key="ColorDescription" label="Cor" visibleInAdvancedArea="true" />
-                    </smartFilterBar:controlConfiguration>
-                </smartFilterBar:SmartFilterBar>
+            <smartFilterBar:SmartFilterBar id="smartFilterBar" liveMode="true"
+                entitySet="ZRDWCDS_VEHICLES" persistencyKey="smartFilterBar">
+                <smartFilterBar:controlConfiguration>
+                    <smartFilterBar:ControlConfiguration key="BrandDescription" label="Marca"
+                        visibleInAdvancedArea="true" />
+                    <smartFilterBar:ControlConfiguration key="ModelDescription" label="Modelo"
+                        visibleInAdvancedArea="true" />
+                    <smartFilterBar:ControlConfiguration key="ColorDescription" label="Cor"
+                        visibleInAdvancedArea="true" />
+                </smartFilterBar:controlConfiguration>
+            </smartFilterBar:SmartFilterBar>
             <smartTable:SmartTable
                 id="st_monitor"
                 xmlns:smartTable="sap.ui.comp.smarttable"
