@@ -7,28 +7,14 @@
     displayBlock="true">
     <Page id="page" title="{i18n>title}">
         <content>
-            <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="ZRDWCDS_VEHICLES" persistencyKey="SmartFilter_Explored">
-                <smartFilterBar:controlConfiguration>
-                    <smartFilterBar:ControlConfiguration key="BrandId">
-                        <smartFilterBar:defaultFilterValues>
-                            <smartFilterBar:SelectOption low="">
-                            </smartFilterBar:SelectOption>
-                        </smartFilterBar:defaultFilterValues>
-                    </smartFilterBar:ControlConfiguration>
-                    <smartFilterBar:ControlConfiguration key="ColorId">
-                        <smartFilterBar:defaultFilterValues>
-                            <smartFilterBar:SelectOption low="">
-                            </smartFilterBar:SelectOption>
-                        </smartFilterBar:defaultFilterValues>
-                    </smartFilterBar:ControlConfiguration>
-                    <smartFilterBar:ControlConfiguration key="ModelDescription">
-                        <smartFilterBar:defaultFilterValues>
-                            <smartFilterBar:SelectOption low="">
-                            </smartFilterBar:SelectOption>
-                        </smartFilterBar:defaultFilterValues>
-                    </smartFilterBar:ControlConfiguration>
-                </smartFilterBar:controlConfiguration>
-            </smartFilterBar:SmartFilterBar>
+           
+                <smartFilterBar:SmartFilterBar id="smartFilterBar" liveMode="true" entitySet="ZRDWCDS_VEHICLES" persistencyKey="ContractsSmartFilterBar">
+                    <smartFilterBar:controlConfiguration>
+                        <smartFilterBar:ControlConfiguration key="BrandDescription" label="Marca" visibleInAdvancedArea="true" />
+                        <smartFilterBar:ControlConfiguration key="ModelDescription" label="Modelo" visibleInAdvancedArea="true" />
+                        <smartFilterBar:ControlConfiguration key="ColorDescription" label="Cor" visibleInAdvancedArea="true" />
+                    </smartFilterBar:controlConfiguration>
+                </smartFilterBar:SmartFilterBar>
             <smartTable:SmartTable
                 id="st_monitor"
                 xmlns:smartTable="sap.ui.comp.smarttable"
@@ -40,7 +26,7 @@
                 class="sapUiResponsiveContentPadding"
                 app:useSmartToggle="true"
                 enableAutoBinding="true"
-                initiallyVisibleFields="BrandDescription,ColorDescription,ColorId,Currency,Km,ModelDescription,PlateId,Price"
+                initiallyVisibleFields="PlateId,BrandDescription,ModelDescription,ColorDescription,Currency,Price,Km"
                 showFullScreenButton="true"
                 busyIndicatorDelay="{listView>/delay}"
                 smartFilterId="smartFilterBar"
